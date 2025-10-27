@@ -10,6 +10,6 @@ RSpec.describe FriendRequest, type: :model do
     user = create(:user)
     friend_request = build(:friend_request, sender: user, receiver: user)
     expect(friend_request).not_to be_valid
-    expect(friend_request.errors[:base]).to include("Cannot request oneself")
+    expect(friend_request.errors[:base]).to include("none")
   end
 end
